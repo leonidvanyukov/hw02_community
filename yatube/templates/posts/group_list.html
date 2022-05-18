@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  <title>Лев Толстой – зеркало русской революции.</title>
+  <title>{{ group.title }}</title>
 {% endblock title %}
 
 {% block content %}
-  <!-- класс py-5 создает отступы сверху и снизу блока -->
   <div class="container py-5">
-    <h1>{{ titles }}</h1>
+    <h1>{{ group.title }}</h1>
     <p>
-      Группа тайных поклонников графа.
+      {{ group.description }}
     </p>
     {% for post in posts %}
         <article>
@@ -27,6 +26,5 @@
         </article>
         {% if not forloop.last %}<hr>{% endif %}
     {% endfor %}
-    <!-- под последним постом нет линии -->
   </div>  
 {% endblock content %}

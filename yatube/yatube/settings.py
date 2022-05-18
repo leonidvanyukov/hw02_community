@@ -138,3 +138,5 @@ TEMPLATES = [
         },
     }
 ]
+
+AMOUNT = 10
