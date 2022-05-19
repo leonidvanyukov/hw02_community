@@ -4,8 +4,10 @@ from django.conf import settings
 from .models import Group, Post
 
 
+# noinspection PyUnresolvedReferences
 def index(request):
-    posts = Post.objects.order_by('-pub_date')[:settings.AMOUNT]
+    # noinspection PyUnresolvedReferences
+    posts = Post.objects[:settings.AMOUNT]
     context = {
         'posts': posts,
     }
@@ -14,7 +16,7 @@ def index(request):
 
 def group_posts(request, slug):
     group = get_object_or_404(Group, slug=slug)
-    posts = group.posts.order_by('-pub_date')[:settings.AMOUNT]
+    posts = group.posts[:settings.AMOUNT]
     context = {
         'group': group,
         'posts': posts,
