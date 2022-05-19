@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    <title>Социальная сеть YaTube</title>
+{% endblock title %}
+
 {% block content %}
-    <div class="container py-5">     
-    <h1>{{ titles }}</h1>
+    <h1>Социальная сеть YaTube</h1>
 
     {% for post in posts %}
         <article>
@@ -24,5 +27,4 @@
         {% if not forloop.last %}<hr>{% endif %}
     {% endfor %}
 
-    </div>  
 {% endblock content %}

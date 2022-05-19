@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
     {% block title %}
-        <title>{{ group.title }}</title>    
+        <title>Главная страница</title>
     {% endblock title %}
 
   </head>
@@ -22,11 +22,11 @@
         {% include 'includes/header.html' %}
     </header>
     <main> 
-
-    {% block content %}
-        Тут все пусто
-    {% endblock content %}
-    
+        <div class="container py-5">
+                {% block content %}
+                    Тут все пусто
+                {% endblock content %}
+        </div>
     </main>
     <footer class="border-top text-center py-3">
         {% include 'includes/footer.html' %}
